@@ -14,9 +14,11 @@
 		4753CF33217C88A70066B0A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4753CF32217C88A70066B0A5 /* Assets.xcassets */; };
 		4753CF36217C88A70066B0A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4753CF34217C88A70066B0A5 /* LaunchScreen.storyboard */; };
 		4753CF39217C88A70066B0A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753CF38217C88A70066B0A5 /* main.m */; };
+		755D10A2679B94EF8BEA099E /* libPods-finvest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6678313C0C54AB1D08F58434 /* libPods-finvest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05FAF071DAADA0494532CB47 /* Pods-finvest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finvest.release.xcconfig"; path = "Pods/Target Support Files/Pods-finvest/Pods-finvest.release.xcconfig"; sourceTree = "<group>"; };
 		4753CF23217C88A60066B0A5 /* finvest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finvest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4753CF26217C88A60066B0A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4753CF27217C88A60066B0A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +31,8 @@
 		4753CF35217C88A70066B0A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4753CF37217C88A70066B0A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4753CF38217C88A70066B0A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6678313C0C54AB1D08F58434 /* libPods-finvest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-finvest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E219A9270B3CA72DE9888D /* Pods-finvest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finvest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-finvest/Pods-finvest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755D10A2679B94EF8BEA099E /* libPods-finvest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21DC7955D75F8D7D24107F93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6678313C0C54AB1D08F58434 /* libPods-finvest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4753CF1A217C88A60066B0A5 = {
 			isa = PBXGroup;
 			children = (
 				4753CF25217C88A60066B0A5 /* finvest */,
 				4753CF24217C88A60066B0A5 /* Products */,
+				C003C326C544A1284EF14735 /* Pods */,
+				21DC7955D75F8D7D24107F93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +91,15 @@
 			path = finvest;
 			sourceTree = "<group>";
 		};
+		C003C326C544A1284EF14735 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97E219A9270B3CA72DE9888D /* Pods-finvest.debug.xcconfig */,
+				05FAF071DAADA0494532CB47 /* Pods-finvest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4753CF3C217C88A70066B0A5 /* Build configuration list for PBXNativeTarget "finvest" */;
 			buildPhases = (
+				099AD825E097BDEA79E34F46 /* [CP] Check Pods Manifest.lock */,
 				4753CF1F217C88A60066B0A5 /* Sources */,
 				4753CF20217C88A60066B0A5 /* Frameworks */,
 				4753CF21217C88A60066B0A5 /* Resources */,
+				DB498AF9870594B55BADFA97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +166,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		099AD825E097BDEA79E34F46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-finvest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB498AF9870594B55BADFA97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-finvest/Pods-finvest-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-finvest/Pods-finvest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4753CF1F217C88A60066B0A5 /* Sources */ = {
@@ -289,6 +362,7 @@
 		};
 		4753CF3D217C88A70066B0A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E219A9270B3CA72DE9888D /* Pods-finvest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +379,7 @@
 		};
 		4753CF3E217C88A70066B0A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05FAF071DAADA0494532CB47 /* Pods-finvest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
